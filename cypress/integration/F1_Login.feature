@@ -1,6 +1,6 @@
 Feature: F1_Login
 
-  @focus
+  @sanity
   Scenario Outline: Login Success with valid credentials and password
     Given a user on the SauceLabs Login Page
     When they enter their Username of "<VALID_USER>" into the Username field

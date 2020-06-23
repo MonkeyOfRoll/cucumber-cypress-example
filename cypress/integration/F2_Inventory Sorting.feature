@@ -5,7 +5,7 @@ Feature: F2_Inventory Sorting
 
 
   @focus
-  Scenario: Sorting Dropdown Contents
+  Scenario: Sorting Dropdown Menu Contents
     When they select the Sorting dropdown
     Then they will be presented with a list of sorting options:
       |ORDER|OPTION_TEXT        |
@@ -14,7 +14,7 @@ Feature: F2_Inventory Sorting
       |2    |Price (low to high)|
       |3    |Price (high to low)|
 
-  @focus
+  @sanity
   Scenario: Sorting Products by price - high to low
     When they select the Sorting dropdown
       And they select the "hilo" Option
