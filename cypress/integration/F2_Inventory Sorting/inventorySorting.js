@@ -3,9 +3,7 @@ import { Given,When,Then } from "cypress-cucumber-preprocessor/steps";
 
 
 
-When(/^they select the Sorting dropdown$/, (userNameInput) => {
-    cy.get('.product_sort_container')
-});
+
 
 Then(/^they will be presented with a list of sorting options:$/, dataTable => {
     for (const {ORDER:index , OPTION_TEXT: optionText} of dataTable.hashes()) {
@@ -18,9 +16,7 @@ Then(/^they will be presented with a list of sorting options:$/, dataTable => {
     }
 });
 
-When(/^they select the \"(.*?)\" Option$/, (sortOptionSelect) => {
-    cy.get('.product_sort_container').select(sortOptionSelect)
-});
+
 
 Then(/^the Products will be sorted as follows;$/, dataTable => {
     for (const {ORDER:order , PRODUCT_NAME: productName, PRICE:price} of dataTable.hashes()) {

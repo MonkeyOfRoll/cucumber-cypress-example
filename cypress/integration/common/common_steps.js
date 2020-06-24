@@ -1,4 +1,4 @@
-import {Given} from "cypress-cucumber-preprocessor/steps";
+import {Given, When} from "cypress-cucumber-preprocessor/steps";
 
 Given('a logged in standard user on the SauceLabs Products Page', () => {
     cy.visit('https://www.saucedemo.com')
@@ -21,4 +21,13 @@ Given('a logged in standard user on the Shopping Cart Page', () => {
     cy.get('.product_label').should('have.text','Products')
     cy.get('.shopping_cart_link').click()
     cy.get('.subheader').should('have.text','Your Cart')
+});
+
+When(/^they select the Sorting dropdown$/, (userNameInput) => {
+    cy.get('.product_sort_container')
+});
+
+
+When(/^they select the \"(.*?)\" Option$/, (sortOptionSelect) => {
+    cy.get('.product_sort_container').select(sortOptionSelect)
 });

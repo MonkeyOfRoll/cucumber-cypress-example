@@ -5,25 +5,29 @@ Feature: F3_Add To Cart
 
 
   @sanity
-  Scenario: Add Cheapest Product to Cart From the Products page
-    When the user adds a product to the cart
+  Scenario: User Adds Cheapest Product to Cart From the Products page
+    When they select the Sorting dropdown
+    And they select the "hilo" Option
+    And the user adds a product to the cart
     |PRODUCT_NAME     |PRODUCT_POSITION |
-    |Sauce Labs Onesie|2                |
+    |Sauce Labs Onesie|6                |
     Then the Add to Cart Button will change to a Remove Button
     And The Cart badge shows the count of "1" item in the cart
     And The item is visible in the cart
       |PRODUCT_NAME             |PRODUCT_POSITION |PRODUCT_PRICE|
-      |Sauce Labs Bike Light    |3                |9.99         |
+      |Sauce Labs Onesie        |3                |7.99         |
 
 
   @sanity
-  Scenario: Add Costliest Product to Cart From the Products page
-    When the user adds a product to the cart
+  Scenario: User Adds Costliest Product to Cart From the Products page
+    When they select the Sorting dropdown
+    And they select the "hilo" Option
+    And the user adds a product to the cart
       |PRODUCT_NAME             |PRODUCT_POSITION |
-      |Sauce Labs Fleece Jacket |3                |
+      |Sauce Labs Fleece Jacket |1                |
     Then the Add to Cart Button will change to a Remove Button
     And The Cart badge shows the count of "2" item in the cart
     And The item is visible in the cart
       |PRODUCT_NAME             |PRODUCT_POSITION |PRODUCT_PRICE|
-      |Sauce Labs Bike Light    |3                |9.99        |
-      |Sauce Labs Bolt T-Shirt  |4                |15.99        |
+      |Sauce Labs Onesie        |3                |7.99         |
+      |Sauce Labs Fleece Jacket |4                |49.99        |
