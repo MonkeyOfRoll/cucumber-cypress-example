@@ -3,6 +3,7 @@ This is the basic version the tests - it;
 - has been treated more like a spike to discover cypress with cucumber
 - provides simple tests for login, inventory and checkout
 - Provides examples of commonly used Gherkin/Cucumber step data-driving (Scenario Outline, DataTables)
+- provides code reuse and organisation via cucumber - although this should be refactored / reorganised to mostly be in page-named js files under common to allow access for all features
 - provides a tagged run for the requested user journey
 - provides examples of other behaviours that could be tested, represented as Scenarios in the Feature files
  
